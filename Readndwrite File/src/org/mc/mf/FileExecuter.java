@@ -179,6 +179,7 @@ public class FileExecuter {
 		String outputPath = filePath.substring(0, indx)+reportFileName;
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath, true))) {
 			writer.write(rd.toString());
+			System.out.println("tky-test");
 			writer.write("\t");
 			writer.write("\n");
 		} catch (IOException e) {
@@ -196,5 +197,5 @@ public class FileExecuter {
 		int min = time.getMinute();
 		int sec = time.getSecond();
 		return mm+""+dd+yyyy+"."+hr+":"+min+":"+sec;
-	}
+		}
 }
